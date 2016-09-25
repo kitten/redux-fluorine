@@ -1,0 +1,81 @@
+{
+  "name": "redux-fluorine",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "jsnext:main": "es/index.js",
+  "files": [
+    "lib",
+    "es",
+    "dist",
+    "src"
+  ],
+  "description": "A Redux enhancer to manage groups of actions as observables (agendas)",
+  "scripts": {
+    "test": "BABEL_ENV=commonjs mocha --compilers js:babel-register --recursive",
+    "test:watch": "npm test -- --watch",
+    "test:cov": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
+    "lint": "eslint src",
+    "clean": "rm -rf coverage lib es dist",
+    "build:cjs": "BABEL_ENV=commonjs babel src --out-dir lib",
+    "build:es": "babel src --out-dir es",
+    "build": "npm run build:cjs && npm run build:es",
+    "prepublish": "npm run clean && npm run build",
+    "preversion": "npm run clean && npm run test",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags"
+  },
+  "author": "Phil Plückthun <phil@plckthn.me> (https://github.com/philpl)",
+  "bugs": {
+    "url": "https://github.com/philpl/redux-fluorine/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philpl/redux-fluorine.git"
+  },
+  "license": "CC0-1.0",
+  "keywords": [
+    "redux",
+    "fluorine",
+    "flux",
+    "observable",
+    "rx",
+    "state",
+    "side effect",
+    "manager",
+    "agenda"
+  ],
+  "dependencies": {
+    "babel-runtime": "^6.9.2",
+    "rxjs": "^5.0.0-beta.12",
+    "symbol-observable": "^1.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-eslint": "^6.1.0",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-closure-elimination": "^1.0.6",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.10.3",
+    "babel-plugin-transform-react-constant-elements": "^6.9.1",
+    "babel-plugin-transform-react-inline-elements": "^6.8.0",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-preset-philpl": "^0.1.0",
+    "babel-register": "^6.9.0",
+    "coveralls": "^2.11.11",
+    "eslint": "^3.0.1",
+    "eslint-config-excellence": "^1.14.0",
+    "eslint-plugin-mocha": "^4.5.1",
+    "eslint-plugin-react": "^6.3.0",
+    "expect": "^1.20.2",
+    "mocha": "^3.0.0",
+    "nyc": "^7.0.0",
+    "redux": "^3.6.0",
+    "webpack": "^2.1.0-beta.13"
+  },
+  "peerDependencies": {
+    "redux": "3.*"
+  },
+  "engines": {
+    "npm": ">= 2.0.0",
+    "node": ">= 0.12.0"
+  }
+}
