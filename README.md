@@ -106,7 +106,7 @@ You can keep track of the observable's state in your container components.
 Or you can compose some actions really quickly. While it is not as elegant for side effects
 as redux-observable for example, it certainly is great for dispatching explicit actions.
 
-# Help & Discussion
+## Help & Discussion
 
 You are welcome to ask questions, discuss your ideas and use cases, or troubleshoot potential
 bugs on the Fluorine Slack!
