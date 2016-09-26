@@ -22,7 +22,7 @@ reverts all its changes, without affecting the rest of your actions.
 [redux-observable](https://github.com/redux-observable/redux-observable).
 
 **Better composition!** Since you can directly dispatch observables, it's easy to compose
-different agendas to create complex behaviours. This even allows you to track them
+different agendas to create complex behaviour. This even allows you to track them
 without creating "signal actions".
 
 ## Usage
@@ -53,7 +53,7 @@ const store = createStore(reducer, initialState, enhancer);
 
 Once you have installed it in your Redux project, you will be able to dispatch observables directly.
 Any emissions from these observables are dispatched as actions. This observable is referred to as an
-agenda. When an agenda errors, all it's actions are reverted.
+agenda. When an agenda errors, all its actions are reverted.
 
 ## Short Demo
 
