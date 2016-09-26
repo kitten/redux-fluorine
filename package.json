@@ -1,6 +1,7 @@
 {
   "name": "redux-fluorine",
-  "version": "1.0.0", "main": "lib/index.js",
+  "version": "1.0.1",
+  "main": "lib/index.js",
   "jsnext:main": "es/index.js",
   "files": [
     "lib",
