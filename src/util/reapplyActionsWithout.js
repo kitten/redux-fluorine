@@ -6,8 +6,7 @@ export default function reapplyActionsWithout(reducer, base, subtract = []) {
   while (anchor.next) {
     // Iterate to next state
     anchor = anchor.next
-
-    const { action, removed } = anchor
+    const { action } = anchor
 
     if (subtract.indexOf(action) > -1) {
       // Prevent recomputation of any states until it's actually
