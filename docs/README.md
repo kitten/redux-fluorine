@@ -3,7 +3,7 @@
 * [README](INTRO.md)
 * [Basics](basics/README.md)
   * [Agendas](basics/agendas.md)
-  * [Installing the enhancer](basics/installing.md)
+  * [Installing the enhancer](basics/installation.md)
 * [Recipes](recipes/README.md)
   * [Cancellation](recipes/cancellation.md)
   * [Loading state without signals](recipes/loading-state.md)
