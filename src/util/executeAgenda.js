@@ -8,7 +8,7 @@ export default function executeAgenda(agenda, store) {
 
   // Subscribe to the agenda and return the subscription
 
-  return agenda.subscribe({
+  const sub = agenda.subscribe({
     next(action) {
       // Dispatch action normally and push it to our bucket
       dispatch(action)
@@ -28,5 +28,9 @@ export default function executeAgenda(agenda, store) {
       // NOTE: We don't need to do anything here
     }
   })
+
+  return {
+    unsubscribe: sub.unsubscribe.bind(sub)
+  }
 }
 

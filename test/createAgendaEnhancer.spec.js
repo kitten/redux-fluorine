@@ -110,6 +110,23 @@ describe('createAgendaEnhancer', () => {
     store.dispatch(Observable.throw('test'))
   })
 
+  it('supports cancellation through the returned subscription', cb => {
+    const store = createStore(counter, createAgendaEnhancer())
+
+    const first = Observable.of(add())
+    const second = Observable.of(add()).delay(10)
+
+    expect(store.getState()).toBe(0)
+    const { unsubscribe } = store.dispatch(first.merge(second))
+    expect(store.getState()).toBe(1)
+    unsubscribe()
+
+    setTimeout(() => {
+      expect(store.getState()).toBe(1)
+      cb()
+    }, 15)
+  })
+
   it('allows the reducer to be replace on the fly', () => {
     function newReducer(state) {
       return state + 'test'
