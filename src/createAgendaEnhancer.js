@@ -12,18 +12,6 @@ function wrapStore(store) {
   }
 
   function dispatch(action) {
-    if (
-      process.env.NODE_ENV !== 'production' &&
-      console.warn &&
-      typeof arguments.caller === 'function' &&
-      arguments.caller.name === 'dispatch'
-    ) {
-      console.warn(
-        'You\'re advised that `createAgendaEnhancer()` should be applied as your outermost enhancer. ' +
-        'If you\'re composing enhancer functions, check whether it is the first argument being passed.'
-      )
-    }
-
     if (isObservable(action)) {
       return executeAgenda(action, store)
     }
