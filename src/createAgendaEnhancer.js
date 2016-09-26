@@ -32,9 +32,7 @@ function wrapStore(store) {
         }
 
         function observeState() {
-          if (observer.next) {
-            observer.next(getState())
-          }
+          observer.next && observer.next(getState())
         }
 
         observeState()

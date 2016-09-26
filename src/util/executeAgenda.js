@@ -15,9 +15,7 @@ export default function executeAgenda(agenda, store) {
       actions.push(action)
     },
     error(err) {
-      if (console.error) {
-        console.error(err)
-      }
+      console.error && console.error(err)
 
       // Instruct the reducer wrapper to recompute the state
       // without any actions inside the `actions` array
