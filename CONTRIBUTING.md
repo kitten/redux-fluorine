@@ -26,7 +26,7 @@ some help with these libraries.
 ## Issues
 
 Generally, for all *bugs*, *questions* and *suggestions* you should open
-an issue on GitHub: [New Issue](https://github.com/philpl/fluorine/issues/new)
+an issue on GitHub: [New Issue](https://github.com/philpl/redux-fluorine/issues/new)
 
 We use it to discuss and track issues that require resolving.
 
@@ -60,7 +60,7 @@ efficently as a community, as well as chatting in groups.
 
 ## Code Contributions
 
-Go to our [GitHub Issues](https://github.com/philpl/fluorine/issues) and
+Go to our [GitHub Issues](https://github.com/philpl/fluorine/redux-issues) and
 check whether some issues need to be resolved. See if someone is already
 working on it, and assign yourself to the issue, if you want to resolve
 it yourself.
@@ -76,12 +76,10 @@ Don't forget to install the dependencies.
 npm install
 ```
 
-Running the `build` task will build Fluorine's source four times.
+Running the `build` task will build Redux Fluorine twice:
 
 - ES Build (Babel)
 - CommonJS Build (Babel)
-- UMD File (Webpack + Babel)
-- Uglified UMD File (Webpack + Babel)
 
 ```
 npm run build
@@ -90,7 +88,7 @@ npm run build
 You might be interested to only build the CommonJS build:
 
 ```
-npm run build:commonjs
+npm run build:cjs
 ```
 
 ### Linting and Testing

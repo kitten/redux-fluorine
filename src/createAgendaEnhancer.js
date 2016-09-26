@@ -1,5 +1,3 @@
-/* eslint no-caller: 0 */
-
 import symbolObservable from 'symbol-observable'
 import isObservable from './util/isObservable'
 import executeAgenda from './util/executeAgenda'
