@@ -14,8 +14,7 @@ function wrapStore(store) {
       return executeAgenda(action, store)
     }
 
-    store.dispatch(action)
-    return action
+    return store.dispatch(action)
   }
 
   function replaceReducer(reducer) {
