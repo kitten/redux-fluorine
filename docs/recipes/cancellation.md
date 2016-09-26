@@ -14,7 +14,7 @@ pass it an observable. It returns the *underlying subscription*.
 This means that you can easily cancel the agenda's execution at any time!
 
 ```js
-const agenda = Observable.of({ type: 'EXPENSIVE_OP' })
+const agenda = Observable.of({ type: 'EXPENSIVE_OP' }).delay(1)
 const { unsuscribe } = store.dispatch(agenda)
 
 unsubscribe()
