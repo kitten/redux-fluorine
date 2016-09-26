@@ -1,4 +1,6 @@
 import expect from 'expect'
+
+import { RECOVER_AFTER_ERROR } from '../../src/actions/filterActions'
 import wrapStateReducer from '../../src/util/wrapStateReducer'
 
 function reducer() {
@@ -6,6 +8,12 @@ function reducer() {
 }
 
 describe('wrapStateReducer', () => {
+  it('throws when reducer is not a function', () => {
+    expect(() => {
+      wrapStateReducer()
+    }).toThrow('wrapStateReducer: Expected `reducer` to be a function.')
+  })
+
   it('returns wrapped states', () => {
     const action = {}
     const lastState = {}
@@ -27,6 +35,19 @@ describe('wrapStateReducer', () => {
 
       cb()
     }, initial)(undefined, action)
+  })
+
+  it('calls reapplyActionsWithout on RECOVER_AFTER_ERROR', () => {
+    const anchor = {}
+
+    const res = wrapStateReducer(reducer)(undefined, {
+      type: RECOVER_AFTER_ERROR,
+      anchor,
+      actions: []
+    })
+
+    expect(res).toBe(anchor)
+    expect(res.next).toBe(null)
   })
 })
 
