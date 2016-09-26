@@ -7,7 +7,9 @@
     "lib",
     "es",
     "dist",
-    "src"
+    "src",
+    "README.md",
+    "LICENSE.md"
   ],
   "description": "A Redux enhancer to manage groups of actions as observables (agendas)",
   "scripts": {
@@ -36,17 +38,16 @@
   "keywords": [
     "redux",
     "fluorine",
-    "flux",
     "observable",
     "rx",
     "state",
     "side effect",
-    "manager",
+    "thunk",
+    "cancel",
     "agenda"
   ],
   "dependencies": {
     "babel-runtime": "^6.9.2",
-    "rxjs": "^5.0.0-beta.12",
     "symbol-observable": "^1.0.2"
   },
   "devDependencies": {
@@ -69,6 +70,7 @@
     "mocha": "^3.0.0",
     "nyc": "^7.0.0",
     "redux": "^3.6.0",
+    "rxjs": "^5.0.0-beta.12",
     "webpack": "^2.1.0-beta.13"
   },
   "peerDependencies": {
