@@ -55,6 +55,11 @@ Once you have installed it in your Redux project, you will be able to dispatch o
 Any emissions from these observables are dispatched as actions. This observable is referred to as an
 agenda. When an agenda errors, all its actions are reverted.
 
+# [Documentation](https://redux.fluorinejs.org)
+
+- [Agendas](https://redux.fluorinejs.org/basics/agendas.html)
+- [Installation](https://redux.fluorinejs.org/basics/installation.html)
+
 ## Short Demo
 
 ```js
