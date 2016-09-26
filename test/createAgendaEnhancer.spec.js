@@ -1,7 +1,6 @@
 import expect from 'expect'
 import symbolObservable from 'symbol-observable'
-import compose from 'compose-function'
-import { createStore } from 'redux'
+import { createStore, compose } from 'redux'
 import { Observable } from 'rxjs'
 
 import { createAgendaEnhancer } from '../src/index'
