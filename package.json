@@ -1,7 +1,6 @@
 {
   "name": "redux-fluorine",
-  "version": "1.0.0",
-  "main": "lib/index.js",
+  "version": "1.0.0", "main": "lib/index.js",
   "jsnext:main": "es/index.js",
   "files": [
     "lib",
@@ -24,7 +23,10 @@
     "prepublish": "npm run clean && npm run build",
     "preversion": "npm run clean && npm run test",
     "version": "npm run build",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "prebook": "gitbook install ./docs",
+    "book": "gitbook build ./docs",
+    "book:serve": "gitbook serve ./docs"
   },
   "author": "Phil Plückthun <phil@plckthn.me> (https://github.com/philpl)",
   "bugs": {
@@ -67,6 +69,7 @@
     "eslint-plugin-mocha": "^4.5.1",
     "eslint-plugin-react": "^6.3.0",
     "expect": "^1.20.2",
+    "gitbook-cli": "^2.1.2",
     "mocha": "^3.0.0",
     "nyc": "^7.0.0",
     "redux": "^3.6.0",
