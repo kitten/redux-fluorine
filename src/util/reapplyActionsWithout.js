@@ -1,7 +1,7 @@
 export default function reapplyActionsWithout(reducer, base, subtract = []) {
   let diverged = false
   let anchor = base.lastValidState || base
-  let lastValid = base
+  let lastValid = anchor
 
   while (anchor.next) {
     // Iterate to next state
