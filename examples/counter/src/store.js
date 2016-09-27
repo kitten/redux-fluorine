@@ -8,7 +8,8 @@ import rootReducer from './reducers'
 const logger = createLogger();
 const enhancer = compose(
   applyMiddleware(thunk, logger),
-  createAgendaEnhancer()
+  createAgendaEnhancer(),
+  window.devToolsExtension && window.devToolsExtension()
 )
 
 const store = createStore(rootReducer, enhancer);
