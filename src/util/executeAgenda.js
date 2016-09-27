@@ -21,7 +21,9 @@ export default function executeAgenda(agenda, store) {
       // without any actions inside the `actions` array
 
       if (actions.length) {
-        dispatch(filterActions(anchor, actions))
+        setTimeout(() => {
+          dispatch(filterActions(anchor, actions))
+        })
       }
     },
     complete() {
