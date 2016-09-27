@@ -37,7 +37,6 @@ export function incrementIfOdd() {
 export function incrementDelayedRollback() {
   return increment()
     .concat(Observable
-      .throw('Hello World!')
-      .delay(1000)) // Delay the error so we can observe the rollback
+      .throw('Hello World!'))
 }
 
