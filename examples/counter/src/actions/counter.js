@@ -32,6 +32,13 @@ export function incrementIfOdd() {
   }
 }
 
+export function incrementInterval(interval = 800, take = 2) {
+  return Observable
+    .interval(interval)
+    .take(take)
+    .flatMap(() => increment())
+}
+
 // This uses the incremention, but concats an error. This will
 // trigger Redux Fluorine to rollback the incremention.
 export function incrementDelayedRollback() {

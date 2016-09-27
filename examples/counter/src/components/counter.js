@@ -7,6 +7,7 @@ import {
   decrement,
   incrementDelayed,
   incrementIfOdd,
+  incrementInterval,
   incrementDelayedRollback
 } from '../actions/counter'
 
@@ -17,6 +18,7 @@ import {
     decrement,
     incrementDelayed,
     incrementIfOdd,
+    incrementInterval,
     incrementDelayedRollback
   }, dispatch))
 
@@ -27,6 +29,7 @@ export default class Counter extends Component {
       decrement,
       incrementDelayed,
       incrementIfOdd,
+      incrementInterval,
       incrementDelayedRollback,
       counter
     } = this.props
@@ -54,6 +57,10 @@ export default class Counter extends Component {
 
           <button onClick={() => incrementIfOdd()}>
             Increment if odd
+          </button>
+
+          <button onClick={() => incrementInterval()}>
+            Increment twice with interval
           </button>
 
           <button onClick={() => incrementDelayedRollback()}>
