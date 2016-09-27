@@ -13,7 +13,7 @@
   ],
   "description": "A Redux enhancer to manage groups of actions as observables (agendas)",
   "scripts": {
-    "test": "BABEL_ENV=commonjs mocha --compilers js:babel-register --recursive",
+    "test": "BABEL_ENV=cjs mocha --compilers js:babel-register --recursive",
     "test:watch": "npm test -- --watch",
     "test:cov": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint src",
