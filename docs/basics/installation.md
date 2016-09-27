@@ -20,8 +20,8 @@ import { createStore, combine, applyMiddleware } from 'redux';
 import { createAgendaEnhancer } from 'redux-fluorine';
 
 const enhancer = combine(
-  createAgendaEnhancer(),
-  applyMiddleware(...middleware)
+  applyMiddleware(...middleware),
+  createAgendaEnhancer()
 )
 
 // For Redux >3.1
@@ -31,13 +31,7 @@ const store = createStore(reducer, enhancer)
 const store = enhancer(createStore)(reducer)
 ```
 
-Make sure that `createAgendaEnhancer()` is the last enhancer you apply. With `combine`,
+Make sure that `createAgendaEnhancer()` is the first enhancer you apply. With `combine`,
 which combines the functions from right-to-left, the enhancer will need to be the
-first argument.
-
-This is necessary so that observables can be identifier quickly. Also with the incorrect
-order you might not be able to use the enhancer with your existing middleware. Or you
-might accidentally apply Redux Devtools at the wrong time.
-
-So make sure that redux-fluorine is the outermost enhancer.
+last argument.
 

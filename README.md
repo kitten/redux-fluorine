@@ -34,17 +34,17 @@ npm install --save redux-fluorine
 ```
 
 It is very simple to integrate Redux Fluorine into your existing Redux projects.
-Keep in mind that because it has to catch observables as early as possible,
-you are advised to apply it *after* all your other enhancers.
-It should be added to the `compose` function as the first argument:
+Keep in mind that because it wraps the store's state, you should apply it
+before the middleware-enhancer.
+It should be added to the `compose` function after the `applyMiddleware`:
 
 ```js
 import { createStore, compose, applyMiddleware } from 'redux';
 import { createAgendaEnhancer } from 'redux-fluorine';
 
 const enhancer = compose(
-  createAgendaEnhancer(),
   applyMiddleware(...middleware),
+  createAgendaEnhancer()
 )
 
 // You need Redux >3.1 to pass the enhancer to createStore directly
