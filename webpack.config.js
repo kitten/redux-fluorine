@@ -26,7 +26,7 @@ var conf = {
     ]
   },
   externals: {
-    'rxjs': {
+    'redux': {
       root: 'Redux',
       commonjs2: 'redux',
       commonjs: 'redux',
