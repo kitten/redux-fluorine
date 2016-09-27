@@ -6,15 +6,17 @@
     "/node_modules/"
   ],
   "plugins": [
-    "transform-runtime",
-    "transform-react-constant-elements",
-    "transform-react-inline-elements",
     "closure-elimination"
   ],
   env: {
-    commonjs: {
+    cjs: {
       plugins: [
         "transform-es2015-modules-commonjs"
+      ]
+    },
+    es: {
+      plugins: [
+        "./scripts/babel-use-lodash-es"
       ]
     }
   }

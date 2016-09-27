@@ -1,4 +1,4 @@
-export default function reapplyActionsWithout(reducer, base, subtract = []) {
+export default function reapplyActionsWithout(reducer, base, subtract) {
   let diverged = false
   let anchor = base.lastValidState || base
   let lastValid = anchor
