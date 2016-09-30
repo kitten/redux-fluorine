@@ -1,6 +1,6 @@
 # Agendas
 
-**Agendas** are redux-fluorine's the only feature, so to speak.
+**Agendas** are redux-fluorine's only feature, so to speak.
 
 They are Observables emitting actions. While in Redux most developers resort to
 thunks or even side effect management for sending a mere request to an API, an
@@ -16,8 +16,8 @@ While thunks and side effect managers are often used for "one-off" kind of actio
 sequences, they're really cumbersome for that task.
 
 Thunks require a lot of boilerplate code and need to be tested throughly. Can you
-guarantees that all errors are being handled gracefully by a thunk that requests
-multiple resources from a server? And how do you compose thunks into complex
+guarantee that all errors are being handled gracefully by a thunk that requests
+multiple resources from a server? How do you compose thunks into complex
 sequences and dependencies?
 
 Side effect managers like [redux-observable](https://redux-observable.js.org)
