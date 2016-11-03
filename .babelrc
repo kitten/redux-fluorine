@@ -5,9 +5,7 @@
   "ignore": [
     "/node_modules/"
   ],
-  "plugins": [
-    "closure-elimination"
-  ],
+  "plugins": [],
   env: {
     cjs: {
       plugins: [
