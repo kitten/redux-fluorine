@@ -60,7 +60,7 @@
     "babel-eslint": "^7.0.0",
     "babel-loader": "^6.2.5",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.16.0",
-    "babel-preset-philpl": "^0.4.0",
+    "babel-preset-philpl": "^0.5.0",
     "babel-register": "^6.16.0",
     "coveralls": "^2.11.11",
     "cross-env": "^3.0.0",
