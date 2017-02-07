@@ -27,9 +27,10 @@
     "preversion": "npm run clean && npm run test",
     "version": "npm run build",
     "postversion": "git push && git push --tags",
-    "prebook": "gitbook install ./docs",
-    "book": "gitbook build ./docs",
-    "book:serve": "gitbook serve ./docs"
+    "prebook": "gitbook install",
+    "book": "gitbook build",
+    "postbook": "cp ./docs/now.json _book/",
+    "book:serve": "gitbook serve"
   },
   "author": "Phil Plückthun <phil@plckthn.me> (https://github.com/philpl)",
   "bugs": {
@@ -69,7 +70,7 @@
     "eslint-plugin-mocha": "^4.5.1",
     "eslint-plugin-react": "^6.6.0",
     "expect": "^1.20.2",
-    "gitbook-cli": "^2.1.2",
+    "gitbook-cli": "^2.3.0",
     "mocha": "^3.1.0",
     "nyc": "^10.0.0",
     "redux": "^3.6.0",

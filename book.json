@@ -1,6 +1,7 @@
 {
-  "title": "Fluorine",
-  "gitbook": "2.x.x",
+  "title": "Redux Fluorine",
+  "gitbook": ">= 3.0.0",
+  "root": "docs",
   "structure": {
     "readme": "INTRO.md",
     "summary": "README.md"
@@ -8,11 +9,7 @@
   "plugins": [
     "github",
     "heading-anchors",
-    "prism",
-    "-highlight",
-    "-sharing",
-    "-fontsettings",
-    "-search"
+    "prism"
   ],
   "pluginsConfig": {
     "github": {
