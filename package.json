@@ -59,7 +59,7 @@
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-eslint": "^7.0.0",
-    "babel-loader": "^6.2.5",
+    "babel-loader": "^7.0.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.16.0",
     "babel-preset-philpl": "^0.5.0",
     "babel-register": "^6.16.0",
